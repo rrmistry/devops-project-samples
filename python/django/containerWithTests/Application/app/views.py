@@ -19,6 +19,19 @@ def home(request):
         }
     )
 
+def analyze(request):
+    """Renders the analyze water sample page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/analyze.html',
+        {
+            'title': 'Analyze',
+            'message': 'Analyze Water Sample',
+            'year':datetime.now().year,
+        }
+    )
+
 def contact(request):
     """Renders the contact page."""
     assert isinstance(request, HttpRequest)
